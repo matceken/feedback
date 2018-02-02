@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Ionic: Select, search & autocomplete</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+   <ion-list>
+      <ion-list-header>
+          Simple Select
+      </ion-list-header>
+      <ion-item>
+          <select-search
+              [(ngModel)]="country1"
+              title="Country"
+              itemValueField="id"
+              itemTextField="name"
+              [items]="countries"
+              (onChange)="countryChange($event)">
+          </select-search>
+      </ion-item>
+  </ion-list> 
+  <!--  <ion-list>
+      <ion-list-header>
+          With preselected value
+      </ion-list-header>
+      <ion-item>
+          <select-search
+              [(ngModel)]="country2"
+              title="Country"
+              itemValueField="id"
+              itemTextField="name"
+              [items]="countries"
+              (onChange)="countryChange($event)">
+          </select-search>
+      </ion-item>
+  </ion-list>  -->
+  <!--  <ion-list>
+      <ion-list-header>
+          With Search
+      </ion-list-header>
+      <ion-item>
+          <select-search
+              [(ngModel)]="country3"
+              title="Country"
+              itemValueField="id"
+              itemTextField="name"
+              [items]="countries"
+              [canSearch]="true"
+              (onChange)="countryChange($event)">
+          </select-search>
+      </ion-item>
+  </ion-list>  -->
+ <!--   <ion-list>
+      <ion-list-header>
+          With Async Search (AJAX)
+      </ion-list-header>
+      <ion-item>
+          <select-search
+              [(ngModel)]="country4"
+              title="Country"
+              itemValueField="id"
+              itemTextField="name"
+              [items]="countries"
+              [canSearch]="true"
+              searchPlaceholder="..."
+              (onSearch)="searchCountries($event)"
+              (onChange)="countryChange($event)">
+          </select-search>
+      </ion-item>
+  </ion-list>  -->
+  <!--  <ion-list>
+      <ion-list-header>
+          With a custom template for items
+      </ion-list-header>
+      <ion-item>
+          <select-search
+              [(ngModel)]="country5"
+              title="Country"
+              itemValueField="id"
+              itemTextField="name"
+              [itemTemplate]="countryTemplate"
+              [items]="countries"
+              [canSearch]="true"
+              (onChange)="countryChange($event)">
+          </select-search>
+      </ion-item>
+  </ion-list>  -->
+ <!--  <ion-list>
+      <ion-list-header>
+          Multiple selection
+      </ion-list-header>
+      <ion-item>
+          <select-search
+              [(ngModel)]="country6"
+              title="Country"
+              itemValueField="id"
+              itemTextField="name"
+              [items]="countries"
+              [canSearch]="true"
+              [multiple]="true"
+              (onChange)="countryChange($event)">
+          </select-search>
+      </ion-item>
+  </ion-list> -->
+ <!--  <ion-list>
+      <ion-list-header>
+          With "Clear" button
+      </ion-list-header>
+      <ion-item>
+          <select-search
+              [(ngModel)]="country7"
+              title="Country"
+              itemValueField="id"
+              itemTextField="name"
+              [items]="countries"
+              (onChange)="countryChange($event)"
+              [canReset]="true">
+          </select-search>
+      </ion-item>
+  </ion-list> -->
+ <!--  <form [formGroup]="form">
+      <ion-list>
+          <ion-list-header>
+              Using together with Angular 2 Validators
+          </ion-list-header>
+          <ion-item>
+              <select-search
+                  formControlName="country8"
+                  title="Country"
+                  itemValueField="id"
+                  itemTextField="name"
+                  [items]="countries"
+                  [canSearch]="true"
+                  (onChange)="countryChange($event)">
+              </select-search>
+              <button ion-button item-right (click)="reset()" [disabled]="!form.valid">Reset</button>
+          </ion-item>
+          <ion-item>
+              <p>Is valid: {{form.valid}}</p>
+          </ion-item>
+      </ion-list>
+  </form>  -->
+</ion-content>

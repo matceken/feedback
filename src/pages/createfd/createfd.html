@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Feedback Oluştur
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+      <ion-item>
+          <ion-label stacked>Kullanıcı2</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Mesaj</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Tip</ion-label>
+        <ion-select [(ngModel)]="tip">
+          <ion-option value="1">Olumlu</ion-option>
+          <ion-option value="0">Olumsuz</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Değerlerimiz</ion-label>
+        <ion-select [(ngModel)]="toppings" multiple="true">
+          <ion-option>Sürdürülebilirlik</ion-option>
+          <ion-option>Standartlaştırma</ion-option>
+          <ion-option>Sürekli İyileştirme</ion-option>
+          <ion-option>Takip Etme</ion-option>
+        </ion-select>
+      </ion-item>
+  
+  </ion-list>
+    
+    <div padding>
+      <button ion-button round>Gönder</button>
+    </div>
+</ion-content>

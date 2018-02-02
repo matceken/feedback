@@ -1,0 +1,73 @@
+<!-- <ion-header>
+    <ion-navbar>
+      <ion-title>
+        Loginx
+      </ion-title>
+    </ion-navbar>
+</ion-header> -->
+  
+
+
+<!--   <ion-content >
+    <br>
+    <br>
+    <ion-list text-center>
+        <ion-item> 
+            <ion-grid>
+                <ion-row justify-content-center align-items-center>
+                  <ion-img width="100" height="100" src="../assets/imgs/icon-256x256.png"></ion-img>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Kullanıcı Adı</ion-label>
+            <ion-input type="text" value=""></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label fixed>Şifre</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+        
+      
+      </ion-list>
+
+      <div text-center>
+        <button ion-button (click)="LoginControl()" round>Giriş</button>
+      </div>
+  </ion-content> -->
+
+  <ion-content padding>
+    <br/>
+    <br/>
+    <form (submit)="doLogin()">
+    <ion-item> 
+            <ion-grid>
+                <ion-row justify-content-center align-items-center>
+                    <ion-img width="100" height="100" src="../../assets/imgs/icon-256x256.png"></ion-img>
+                </ion-row>
+            </ion-grid> 
+        </ion-item>
+      <ion-item>
+        <ion-label fixed>Kullanıcı Adı</ion-label>
+        <ion-input [(ngModel)]="loginData.username" name="username" type="text" placeholder="Username" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Şifre2</ion-label>
+        <ion-input [(ngModel)]="loginData.password" name="password" type="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <br/>
+      <button ion-button block type="submit">
+        Giriş11w
+      </button>
+    </form>
+  
+<!--     <button ion-button block clear (click)="register()">
+      No have an account? Register Now
+    </button> -->
+  </ion-content>
+
+ 
+
+
+ 
