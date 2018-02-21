@@ -7,7 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
 
-  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/icon/icon_256x256_jWl_icon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
 
@@ -25,6 +25,12 @@
         .catch(err => console.error('Error', err));
     }
   </script>-->
+  <script>
+    function ImgOnError(img1)
+    {
+        img1.Src = 'http://213.153.171.81/WebApiFeedback/Images/User/no-image.png';
+    }
+  </script>
 
   <link href="build/main.css" rel="stylesheet">
 

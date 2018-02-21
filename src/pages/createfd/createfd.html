@@ -1,45 +1,121 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Feedback Oluştur
+      Geribildirim Oluştur
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
 
-      <ion-item>
-          <ion-label stacked>Kullanıcı2</ion-label>
-          <ion-input type="text"></ion-input>
+  <!--   <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-list>
+                                <ion-item>
+                                    <select-searchable
+                                        [(ngModel)]="user1"
+                                        title="Kullanıcı"
+                                        itemValueField="ID"
+                                        itemTextField="ADSOYAD"
+                                        [items]="userssearch"
+                                        [canSearch]="true"
+                                        searchPlaceholder="En az 3 hane giriniz,Örn: &quot;Ali&quot;"
+                                        (onSearch)="searchUsers($event)"
+                                        (onChange)="userChange($event)">
+                                    </select-searchable>
+                                </ion-item>
+                            </ion-list>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-12>
+                    <ion-textarea placeholder="Mesaj.." [(ngModel)]="msg"></ion-textarea>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-4>
+                        <ion-label>Tip</ion-label>
+                </ion-col>
+                <ion-col style="text-align:center" col-8>
+                    <ion-select [(ngModel)]="tip">
+                    <ion-option value="1">Devam Et</ion-option>
+                    <ion-option value="2">Dikkate Al</ion-option>
+                    </ion-select>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-4>
+                        <ion-label>Değerlerimiz</ion-label>
+                  </ion-col>
+                  <ion-col col-8>
+                        
+                        <ion-select [(ngModel)]="toppings" multiple="true">
+                          <ion-option value=1>Standartlaştırma</ion-option>
+                          <ion-option value=2>Takip Etme</ion-option>
+                          <ion-option value=3>Sürekli İyileştirme</ion-option>
+                          <ion-option value=4>Sürdürülebilirlik</ion-option>
+                        </ion-select>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col style="text-align:center" col-12>
+                        <div padding>
+                                <button ion-button round (click)="SendFeedback(this._id)">Gönder</button>
+                        </div>
+                  </ion-col>
+              </ion-row>
+        </ion-grid>
+    
+            
+     </ion-card> -->
+
+     <ion-card>
+    <ion-list>
+        <ion-item>
+            <select-searchable
+                [(ngModel)]="user1"
+                title="Kullanıcı Seçimi"
+                itemValueField="ID"
+                itemTextField="ADSOYAD"
+                [items]="userssearch"
+                [canSearch]="true"
+                searchPlaceholder="En az 3 hane giriniz,Örn: &quot;Ali&quot;"
+                (onSearch)="searchUsers($event)"
+                (onChange)="userChange($event)">
+            </select-searchable>
         </ion-item>
-  
+    </ion-list>
+
+    <ion-list> 
     <ion-item>
-      <ion-label stacked>Mesaj</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-textarea placeholder="Mesaj.." [(ngModel)]="msg"></ion-textarea>
     </ion-item>
 
+
     <ion-item>
-        <ion-label>Tip</ion-label>
+        <ion-label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:12px">Tip</ion-label>
         <ion-select [(ngModel)]="tip">
-          <ion-option value="1">Olumlu</ion-option>
-          <ion-option value="0">Olumsuz</ion-option>
+          <ion-option value="1">Devam Et</ion-option>
+          <ion-option value="2">Dikkate Al</ion-option>
         </ion-select>
     </ion-item>
 
     <ion-item>
-        <ion-label>Değerlerimiz</ion-label>
+        <ion-label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:12px">Değerlerimiz</ion-label>
         <ion-select [(ngModel)]="toppings" multiple="true">
-          <ion-option>Sürdürülebilirlik</ion-option>
-          <ion-option>Standartlaştırma</ion-option>
-          <ion-option>Sürekli İyileştirme</ion-option>
-          <ion-option>Takip Etme</ion-option>
+          <ion-option value=1>Standartlaştırma</ion-option>
+          <ion-option value=2>Takip Etme</ion-option>
+          <ion-option value=3>Sürekli İyileştirme</ion-option>
+          <ion-option value=4>Sürdürülebilirlik</ion-option>
         </ion-select>
       </ion-item>
   
   </ion-list>
     
     <div padding>
-      <button ion-button round>Gönder</button>
-    </div>
+      <button ion-button round (click)="SendFeedback(this._id)">Gönder</button>
+    </div> 
+    </ion-card>
 </ion-content>

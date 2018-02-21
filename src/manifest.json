@@ -1,13 +1,29 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "FeedBack",
+  "short_name": "FeedBack",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "assets/imgs/icon-256x256.png",
-    "sizes": "256x256",
-    "type": "image/png"
-  }],
+    "src": "assets/imgs/icon-128x128.jpg",
+      "sizes": "128x128",
+      "type": "image/jpg"
+    }, {
+      "src": "assets/imgs/icon-144x144.jpg",
+      "sizes": "144x144",
+      "type": "image/jpg"
+    }, {
+      "src": "assets/imgs/icon-152x152.jpg",
+      "sizes": "152x152",
+      "type": "image/jpg"
+    }, {
+      "src": "assets/imgs/icon-192x192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }, {
+      "src": "assets/imgs/icon-256x256.jpg",
+      "sizes": "256x256",
+      "type": "image/jpg"
+    }],
   "background_color": "#4e8ef7",
   "theme_color": "#4e8ef7"
 }

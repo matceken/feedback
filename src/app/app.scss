@@ -14,3 +14,54 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.toolbar-background {
+
+    background-image: -webkit-gradient(linear, left 0%, left 100%, #2cafe3, to(#49c1f0));
+    background-image: -webkit-linear-gradient(top, #2cafe3, 0%, #49c1f0, 100%);
+    background-image: -moz-linear-gradient(top,#2cafe3 0%, #49c1f0 100%);
+    background-image: linear-gradient(to bottom, #2cafe3 0%, #49c1f0 100%);
+    background-repeat: repeat-x;
+}
+.toolbar-title {
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.card {
+    margin: 12px;
+    border-radius: 10px;
+    width: calc(100% - 24px);
+    font-size: 1.4rem;
+    background: #fff;
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px 1px #49c1f0;
+}
+
+.tabs .tabbar {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 0.55px solid rgba(0, 0, 0, 0.3);
+
+    background-image: -webkit-gradient(linear, left 0%, left 100%, #f2f9fe, to(#c8d7dc));
+    background-image: -webkit-linear-gradient(top, #f2f9fe, 0%, #c8d7dc, 100%);
+    background-image: -moz-linear-gradient(top,#f2f9fe 0%, #c8d7dc 100%);
+    background-image: linear-gradient(to bottom, #f2f9fe 0%, #c8d7dc 100%);
+    background-repeat: repeat-x;
+}
+
+.tabs .tab-button:hover:not(.disable-hover), .tabs .tab-button[aria-selected=true] {
+    color: black;
+    font-weight: bold;
+}
+.tabs .tab-button {
+    max-width: 240px;
+    min-height: 49px;
+    font-size: 10px;
+    font-weight: 500;
+    color:Black;
+    padding: 0 2px;
+}

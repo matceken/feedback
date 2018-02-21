@@ -10,13 +10,19 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { incomingPage} from '../pages/incoming/incoming';
+import { SentPage} from '../pages/sent/sent';
+import { WallPage} from '../pages/wall/wall';
+import { RequestfdPage} from '../pages/requestfd/requestfd';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { MessageServiceProvider } from '../providers/message-service/message-service';
 import { AuthService } from '../providers/auth-service/auth-service'; 
-
+import { SelectSearchableModule } from '../components/select-searchable/select-searchable-module';
+import { FeedbackService } from '../providers/feedback-service/feedback-service';
+ 
 
 @NgModule({
   declarations: [
@@ -26,12 +32,17 @@ import { AuthService } from '../providers/auth-service/auth-service';
     HomePage,
     TabsPage,
     LoginPage,
-    createfdPage
+    createfdPage,
+    incomingPage,
+    SentPage,
+    WallPage,
+    RequestfdPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    SelectSearchableModule 
     
   ],
   bootstrap: [IonicApp],
@@ -42,14 +53,19 @@ import { AuthService } from '../providers/auth-service/auth-service';
     HomePage,
     TabsPage,
     LoginPage,
-    createfdPage
+    createfdPage,
+    incomingPage,
+    SentPage,
+    WallPage,
+    RequestfdPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MessageServiceProvider,
-    AuthService
+    AuthService,
+    FeedbackService
   ]
 })
 export class AppModule {}

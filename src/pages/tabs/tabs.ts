@@ -4,6 +4,10 @@ import { AboutPage } from '../about/about';
 import { createfdPage } from '../createfd/createfd';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
+import { incomingPage} from '../incoming/incoming';
+import { SentPage} from '../sent/sent';
+import { WallPage} from '../wall/wall';
+import { RequestfdPage} from '../requestfd/requestfd';
 
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,11 +36,11 @@ import { MyApp } from '../../app/app.component';
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
+  tab1Root = WallPage;
   tab2Root = createfdPage;
-  tab3Root = AboutPage;
-  tab4Root = createfdPage;
-  tab5Root = ContactPage;
+  tab3Root = incomingPage;
+  tab4Root = SentPage;
+  tab5Root = RequestfdPage;
   constructor() {
 
   }

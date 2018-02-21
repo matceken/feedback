@@ -11,12 +11,6 @@ import { AuthService } from '../../providers/auth-service/auth-service';
   templateUrl: 'login.html' 
 })
 
-/* @Page(
-  {
-    templateUrl:"build/pages/login/login.html",
-    providers:[brsws]
-  }
-) */
 
 export class LoginPage {
   public people: any;
@@ -35,13 +29,14 @@ export class LoginPage {
 
  doLogin() {
    this.showLoader();
-  this.authService.login(this.loginData).then((result) => {
+   this.authService.login(this.loginData).then((result) => {
     this.loading.dismiss();
     this.data = result;
-    console.log(this.data);
+    //console.log(this.data);
     if(this.data)
     {
       localStorage.setItem('token', this.data.access_token);
+      localStorage.setItem('uname',this.loginData.username);
       this.navCtrl.setRoot(TabsPage);
     }
     else
