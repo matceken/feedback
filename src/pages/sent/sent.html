@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+          Gönderdiğim Geribildirimler
+      </ion-title>
+    </ion-navbar>
+    
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let incitem of incitems">
+    <ion-grid>
+        <ion-row>
+            <ion-col col-3>
+                <ion-thumbnail item-start style="margin-top:0px;vertical-align: top">
+                    <img src={{incitem.USRIMG}} style="width:60px;" onerror="javascript:ImgOnError(this);">
+                  </ion-thumbnail>
+            </ion-col>
+            <ion-col col-9>
+                <p style="color: #1c72c7; font-weight: bold;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:12px">{{incitem.ADSOYAD}}</p>
+                <p style="color: #1c72c7; font-size: 9px;">{{incitem.CDATE1}}</p>
+                <p class="wrap" style="word-wrap: break-word; word-break: break-all;">{{incitem.COMMENT}}</p>
+               <!--  <button ion-button clear item-end>View</button> -->
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-3></ion-col>
+            <ion-col col-2>
+                <ion-thumbnail item-start style="margin-top:0px;vertical-align: top">
+                    <img src={{incitem.TYPEIMG}} style="width:30px;height:30px" >
+                </ion-thumbnail>
+            </ion-col>
+            <ion-col col-2>
+                <p style="font-size:10px;color:rgb(124, 93, 143); text-align:left;margin-left:0px;margin-top:8px">{{incitem.TYPE}}</p>
+            </ion-col>
+            <ion-col col-5></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="text-align:center" col-12>
+                <ion-badge *ngFor="let incitem1 of incitem.Toppings" style="margin-left:1px; margin-top:1px; font-weight:normal" color="light2">{{incitem1.Text}}</ion-badge>
+            </ion-col>
+          </ion-row>
+    </ion-grid>
+
+        
+ </ion-card>
+</ion-content>

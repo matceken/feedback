@@ -1,0 +1,20 @@
+.page-incoming
+{
+     ion-col div {
+    background-color: #89a8e6;
+    border: 1px solid #8c8f94;
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  p {
+    padding: 10px 0 0 10px !important;
+    margin: 0;
+  } 
+
+  #ion-badge{
+    $badge-font-size:3px;
+  }
+
+}
